@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+
+
+/* sectionListWrap 목차  */
+
+.sectionList {
+	width:12.5rem;;
+	height:12.5rem;
+}
+
+
+.sectionList01 {
+	top:25%;
+	left:25%;
+}
+
+.sectionList02 {
+	top:20%;
+	left:75%;
+}
+
+.sectionList03 {
+	top:65%;
+	left:25%;
+}
+
+.sectionList04 {
+	top:60%;
+	left:75%;
+}
+
+/* background-title*/
+
+.title > span {
+	font-size:4rem;
+}
+
+.title > h2 {
+	font-size:2.4rem;
+}
+
+.title > p {
+	font-size:2.4rem;
+	margin-top:5px;
+}
+
+
+  
