@@ -1,0 +1,223 @@
+@charset "utf-8";
+
+* {
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+body,html {
+	font-size:10px;
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+a { 
+	text-decoration:none;
+	color:#333;
+	font-weight:700;
+	font-size:1.6rem;
+}
+
+li {
+	list-style:none;
+}
+
+.wrapper {
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+  position:relative;
+	top:0;
+	left:0;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
+
+/* header */
+
+.header {
+	width:100%;
+	height:auto;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:10;
+	/* display:flex;
+	justify-content: space-around;
+	align-items:center; */
+}
+
+.header > nav {
+	width:100%;
+	display:flex;
+	justify-content:space-around;
+	align-items: center;
+}
+
+.logo { 
+}
+.logo a {
+	display:inline-block;
+	width: 20rem;
+  color:#fff;
+	font-size:5rem;
+	/* background:url(images/logo.png); */
+}
+
+.logo img {
+	width:100%;
+	height:100%;
+}
+
+
+
+.menu {
+  width:80%;
+	display:flex;
+	background:10px solid red;
+}
+.menu > li {
+  width:auto;
+}
+
+.menu > li > a {
+	display:block;
+	color:#fff;
+	text-align: center;
+  width:auto; 
+	height:auto;
+	padding:8px 12px;
+}
+
+/* background  css */
+
+.background {
+	width:100%;
+	height:100vh;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:0;
+	overflow:hidden;
+	opacity: 0.5;
+	transition:0.5s;
+}
+
+.background.active {
+	z-index:3;
+	opacity:1;
+}
+
+.background.enabled {
+	z-index:2;
+	opacity:1;
+	transition:1s;
+}
+
+
+.background01 {
+
+}
+
+.backgroundImage {
+  width:100%;
+	height:100vh;
+}
+
+.backgroundImage01 {
+	background:url(../images/bg01.jpg) no-repeat center center/cover;
+}
+
+
+.background01 > img {
+  animation:backgroundScale 40s alternate;
+}
+
+.background02 {
+
+}
+
+.backgroundImage02 {
+	background:url(../images/bg02.jpg) no-repeat center center/cover;
+}
+
+.background03 {
+
+}
+
+.backgroundImage03 {
+	width:100%;
+	height:100vh;
+	background:url(../images/bg03.jpg) no-repeat center center/cover;
+}
+
+.background04 {
+
+}
+
+.backgroundImage04 {
+	width:100%;
+	height:100vh;
+	background:url(../images/bg04.jpg) no-repeat center center/cover;
+}
+
+
+.backgroundImage05 {
+	width:100%;
+	height:100vh;
+	background:url(../images/bg05.jpg) no-repeat center center/cover;
+}
+
+
+/* background-title*/
+.background-title {
+	display:flex;
+	flex-direction: column;
+	position:relative;
+	top:0;
+	left:0;
+	z-index:5;
+}
+.background-title > .title {
+	color:#fff;
+	width:100%;
+	max-width:40rem;
+	text-align:center;
+	padding:2.6% 0px;
+	opacity:0.5;
+}
+
+.title.active {
+	opacity:1;
+}
+
+.title > span {
+	font-size:3rem;
+}
+
+.title > h2 {
+	font-size:2.4rem;
+}
+
+.title > p {
+	font-size:1.2rem;
+	margin-top:5px;
+}
+
+@keyframes backgroundScale {
+	0% { transform:scale(1)}
+	100% { transform:scale(1.26);}
+}
+
+.background-line {
+	width:100%;
+	height:0.1rem; 
+	background:#fff;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:10;
+	opacity:.2;
+	transition:0.5s;
+}
