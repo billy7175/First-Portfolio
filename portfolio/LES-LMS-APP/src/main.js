@@ -115,6 +115,7 @@ const UICtrl = (function () {
     userList: ".user-list",
     addBtn: ".add-btn",
     addUser: ".add-user",
+    registerUser:".register-user",
     updateUser: ".update-user",
     updateUserBtn : '.update-user-btn',
     cancelBtn: ".cancel-btn",
@@ -236,7 +237,7 @@ const App = (function (ItemCtrl, UICtrl) {
       .querySelector(UISelectors.cancelBtn)
       .addEventListener("click", hideModal);
     document
-      .querySelector(UISelectors.addBtn)
+      .querySelector(UISelectors.registerUser)
       .addEventListener("click", showModal);
     document
       .querySelector(UISelectors.addUser)
