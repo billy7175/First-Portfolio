@@ -162,6 +162,7 @@ const UICtrl = (function () {
     },
     showModal: function () {
       document.querySelector(UISelectors.modal).style.display = "block";
+      
     },
     getUserInputs: function () {
       return {
@@ -219,10 +220,13 @@ const UICtrl = (function () {
       document.querySelector(UISelectors.userAddress).value = "";
       document.querySelector(UISelectors.userClass).value = "";
     },
-    validateInputs() {
-      // if(UISelectors.name.value = ''){
-      //   alert("please fill the name.");
-      // }
+    addUserState: function(){
+      document.querySelector(UISelectors.updateUserBtn).style.display = 'none';
+      document.querySelector(UISelectors.addUser).style.display= 'inline-block';
+    },
+    updateUserState: function(){
+      document.querySelector(UISelectors.addUser).style.display= 'none';
+      document.querySelector(UISelectors.updateUserBtn).style.display = 'inline-block';
     },
     getSelectors() {
       return UISelectors;
@@ -242,6 +246,7 @@ const App = (function (ItemCtrl, UICtrl) {
     document
       .querySelector(UISelectors.addUser)
       .addEventListener("click", addUser);
+
     document.querySelector(UISelectors.modal).style.display = "none";
 
     document
@@ -258,6 +263,7 @@ const App = (function (ItemCtrl, UICtrl) {
 
   function clickUpdateUser(e) {
     if (e.target.classList.contains("update-user")) {
+      UICtrl.updateUserState();
       const idToUpdate = e.target.parentNode.parentNode.firstElementChild.textContent;
       UICtrl.updateUserToModal(idToUpdate);
     }
@@ -316,6 +322,8 @@ const App = (function (ItemCtrl, UICtrl) {
 
   function showModal() {
     UICtrl.showModal();
+    UICtrl.addUserState();
+  
   }
 
   return {
