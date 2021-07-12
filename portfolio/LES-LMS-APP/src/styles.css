@@ -176,6 +176,12 @@ main {
   font-weight: 700;
 }
 
+.update-user-btn {
+  background-color: seagreen;
+  color:white;
+  margin-right:10px;
+}
+
 .add-btn {
   float: right;
 }
