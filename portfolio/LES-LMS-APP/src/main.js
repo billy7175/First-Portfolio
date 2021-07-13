@@ -278,6 +278,7 @@ const App = (function (ItemCtrl, UICtrl) {
     const updatedUsers = ItemCtrl.updateUserList(idToUpdate,getUpdateUserInputs);
     UICtrl.updateUserListToUI(updatedUsers);
     UICtrl.hideModal();
+    UICtrl.clearInputs();
   }
 
   function deleteUser(e) {
